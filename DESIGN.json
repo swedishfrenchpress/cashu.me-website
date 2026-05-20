@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-20T22:00:00Z",
+  "title": "Design System: cashu.me",
+  "extensions": {
+    "colorMeta": {
+      "cashu-lilac": {
+        "role": "primary",
+        "displayName": "Cashu Lilac",
+        "canonical": "oklch(75% 0.09 285)",
+        "tonalRamp": [
+          "oklch(18% 0.06 285)",
+          "oklch(28% 0.08 285)",
+          "oklch(40% 0.09 285)",
+          "oklch(52% 0.09 285)",
+          "oklch(63% 0.09 285)",
+          "oklch(75% 0.09 285)",
+          "oklch(85% 0.06 285)",
+          "oklch(95% 0.03 285)"
+        ]
+      },
+      "cashu-lilac-deep": {
+        "role": "primary",
+        "displayName": "Cashu Lilac Deep",
+        "canonical": "oklch(56% 0.18 285)",
+        "tonalRamp": [
+          "oklch(15% 0.10 285)",
+          "oklch(25% 0.14 285)",
+          "oklch(36% 0.17 285)",
+          "oklch(46% 0.18 285)",
+          "oklch(56% 0.18 285)",
+          "oklch(68% 0.16 285)",
+          "oklch(80% 0.11 285)",
+          "oklch(92% 0.05 285)"
+        ]
+      },
+      "inkwell": {
+        "role": "neutral",
+        "displayName": "Inkwell",
+        "canonical": "oklch(13% 0.003 285)",
+        "tonalRamp": [
+          "oklch(10% 0.003 285)",
+          "oklch(15% 0.003 285)",
+          "oklch(22% 0.003 285)",
+          "oklch(35% 0.003 285)",
+          "oklch(50% 0.003 285)",
+          "oklch(68% 0.003 285)",
+          "oklch(85% 0.003 285)",
+          "oklch(98% 0.003 285)"
+        ]
+      },
+      "specimen-cream": {
+        "role": "neutral",
+        "displayName": "Specimen Cream",
+        "canonical": "oklch(99% 0.003 285)",
+        "tonalRamp": [
+          "oklch(20% 0.003 285)",
+          "oklch(40% 0.003 285)",
+          "oklch(60% 0.003 285)",
+          "oklch(75% 0.003 285)",
+          "oklch(86% 0.003 285)",
+          "oklch(93% 0.003 285)",
+          "oklch(97% 0.003 285)",
+          "oklch(99% 0.003 285)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(98% 0.003 285)"
+      },
+      "ash-light": {
+        "role": "neutral",
+        "displayName": "Ash Light",
+        "canonical": "oklch(60% 0.005 285)"
+      },
+      "ash-dark": {
+        "role": "neutral",
+        "displayName": "Ash Dark",
+        "canonical": "oklch(50% 0.005 285)"
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Rule Dark",
+        "canonical": "oklch(22% 0.003 285)"
+      },
+      "rule-light": {
+        "role": "neutral",
+        "displayName": "Rule Light",
+        "canonical": "oklch(92% 0.003 285)"
+      }
+    },
+    "typographyMeta": {
+      "display-1": {
+        "displayName": "Display 1",
+        "purpose": "Hero statements and the final CTA. One per section, at most."
+      },
+      "display-2": {
+        "displayName": "Display 2",
+        "purpose": "Section headings."
+      },
+      "display-3": {
+        "displayName": "Display 3",
+        "purpose": "Sub-section / smaller display moments."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Introductory paragraphs following a Display heading. Capped at 48–55ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Pillar / column / accordion prose. Capped at 65ch."
+      },
+      "label": {
+        "displayName": "Label / Mono",
+        "purpose": "Eyebrows ([001] CASHU PROTOCOL), pill-tag chips, version stamps. Mono is structural, not decorative."
+      }
+    },
+    "shadows": [
+      {
+        "name": "phone-drop",
+        "value": "0 30px 60px -20px rgba(0,0,0,0.4)",
+        "purpose": "Reserved for the Phone Placeholder component only. Depicts a physical device sitting on a surface. Never reused on UI primitives."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default ease-out-quart for hover, navbar blur, accordion icon rotation."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA Pill",
+      "kind": "button",
+      "refersTo": "pill-cta",
+      "description": "Inverse-surface fill, pill-shaped. Used at most once per section as the primary action.",
+      "html": "<a href=\"#\" class=\"ds-pill-cta\">Download wallet <span aria-hidden=\"true\">&rarr;</span></a>",
+      "css": ".ds-pill-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #fafafa; color: #0a0a0a; border-radius: 9999px; font-family: 'Satoshi', system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: background-color 0.2s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s cubic-bezier(0.22, 1, 0.36, 1); } .ds-pill-cta:hover { background: #b4a7f5; color: #0a0a0a; } .ds-pill-cta:focus-visible { outline: 2px solid #b4a7f5; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Pill",
+      "kind": "button",
+      "refersTo": "pill-outline",
+      "description": "Secondary action adjacent to CTA. Hairline border, transparent fill.",
+      "html": "<a href=\"#\" class=\"ds-pill-outline\">Read the docs</a>",
+      "css": ".ds-pill-outline { display: inline-flex; align-items: center; padding: 0.5rem 1rem; background: transparent; color: #fafafa; border: 1px solid rgba(250, 250, 250, 0.3); border-radius: 9999px; font-family: 'Satoshi', system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: border-color 0.2s cubic-bezier(0.22, 1, 0.36, 1); } .ds-pill-outline:hover { border-color: #fafafa; }"
+    },
+    {
+      "name": "Tag Pill",
+      "kind": "chip",
+      "refersTo": "pill-tag",
+      "description": "Static label chip. Mono type. Used to enumerate audience archetypes in feature columns. Never clickable.",
+      "html": "<span class=\"ds-pill-tag\">Privacy advocates</span>",
+      "css": ".ds-pill-tag { display: inline-flex; align-items: center; padding: 0.375rem 0.75rem; background: transparent; color: rgba(250, 250, 250, 0.8); border: 1px solid #1f1f22; border-radius: 9999px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.75rem; font-weight: 400; letter-spacing: 0; }"
+    },
+    {
+      "name": "Index Mark",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Bracketed numeric marker in JetBrains Mono. Sits in section eyebrows and floats at the top-right of feature columns. Rendered in Cashu Lilac.",
+      "html": "<span class=\"ds-index-mark\" aria-hidden=\"true\">[1]</span>",
+      "css": ".ds-index-mark { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 2.25rem; font-variant-numeric: tabular-nums; color: #b4a7f5; line-height: 1; }"
+    },
+    {
+      "name": "Accordion Item",
+      "kind": "custom",
+      "refersTo": "accordion",
+      "description": "Native <details> built on hairline rules. The icon rotates from + to − on open; no animated height.",
+      "html": "<details open class=\"ds-accordion\"><summary class=\"ds-accordion-summary\"><span>Bearer instrument</span><span class=\"ds-accordion-icon\" aria-hidden=\"true\"><span class=\"ds-accordion-h\"></span><span class=\"ds-accordion-v\"></span></span></summary><div class=\"ds-accordion-body\">Cashu tokens are unforgeable digital objects. Whoever holds them owns them. No accounts, no server-side balances, no claim on someone else&rsquo;s books.</div></details>",
+      "css": ".ds-accordion { border-top: 1px solid #e5e5e5; padding: 1.5rem 0; color: #0a0a0a; font-family: 'Satoshi', system-ui, sans-serif; } .ds-accordion summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; font-size: 1.25rem; font-weight: 500; letter-spacing: -0.015em; } .ds-accordion summary::-webkit-details-marker { display: none; } .ds-accordion-icon { position: relative; width: 1rem; height: 1rem; flex-shrink: 0; color: rgba(10, 10, 10, 0.7); } .ds-accordion-h { position: absolute; left: 0; top: 50%; width: 1rem; height: 1px; background: currentColor; transform: translateY(-50%); } .ds-accordion-v { position: absolute; left: 50%; top: 0; width: 1px; height: 1rem; background: currentColor; transform: translateX(-50%); transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1); } .ds-accordion[open] .ds-accordion-v { transform: translateX(-50%) rotate(90deg) scaleY(0); } .ds-accordion-body { padding-top: 1rem; max-width: 65ch; color: #6b6b73; line-height: 1.55; }"
+    },
+    {
+      "name": "Phone Placeholder",
+      "kind": "custom",
+      "refersTo": "phone-placeholder",
+      "description": "Signature component. Mimics a phone bezel and screen with a dynamic-island notch. Locked at 9:19.5 aspect ratio. The only place a drop shadow appears in the system.",
+      "html": "<div class=\"ds-phone\"><div class=\"ds-phone-bezel\"></div><div class=\"ds-phone-screen\"><div class=\"ds-phone-hatch\" aria-hidden=\"true\"></div><div class=\"ds-phone-notch\"></div><span class=\"ds-phone-label\">Balance</span></div></div>",
+      "css": ".ds-phone { position: relative; width: 200px; aspect-ratio: 9 / 19.5; } .ds-phone-bezel { position: absolute; inset: 0; background: #0f0f12; border: 1px solid #222226; border-radius: 2.25rem; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.4); } .ds-phone-screen { position: absolute; inset: 6px; border-radius: 1.85rem; background: #0a0a0a; overflow: hidden; } .ds-phone-hatch { position: absolute; inset: 0; opacity: 0.6; color: #222226; background-image: repeating-linear-gradient(45deg, transparent 0 14px, currentColor 14px 15px); } .ds-phone-notch { position: absolute; left: 50%; top: 8px; transform: translateX(-50%); height: 20px; width: 80px; background: rgba(0,0,0,0.8); border-radius: 9999px; } .ds-phone-label { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8a93; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(4px); padding: 4px 8px; border-radius: 9999px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bearer Specimen",
+    "overview": "cashu.me is a specimen page for a piece of digital cash. Type is the artifact. The page reads like a museum caption: dispassionate, precise, large, asking the viewer to look without selling them anything. Sections alternate between a black inkwell and a white specimen cream, the way a printed monograph alternates between facing plates and explanatory text. The aesthetic is editorial and committed, not enterprise. Restraint is the voice. The page rejects every dominant crypto-site reflex: it is not neon, not glassmorphic, not chart-heavy, not pastel, not navy-and-gold.",
+    "keyCharacteristics": [
+      "Editorial scale (hero up to ~10rem at large viewports), tight tracking (-0.035em), short leading (0.94).",
+      "Section-scoped dark/light theming via [data-theme] — themes alternate, not chosen.",
+      "Lilac accent used sparingly: [N] marks, CTA hover, ::selection. Never large fields.",
+      "Native <details> accordion, native <a> pill buttons. No bespoke widgets where the platform suffices.",
+      "Phone placeholders maintain device proportions (9:19.5); no skeuomorphic chrome."
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Cashu Lilac is the sole chromatic note in the system. It appears on no more than ~5% of any given screen. Its rarity is the point.", "section": "colors" },
+      { "name": "The No-Pure-Black, No-Pure-White Rule", "body": "Every surface tints toward the brand hue at chroma 0.005–0.01. Pure #0a0a0a and #ffffff are temporary.", "section": "colors" },
+      { "name": "The Specimen Scale Rule", "body": "The hero owns Display 1. No other element on the page reaches that size. Hierarchy is enforced by giving the apex one place to live.", "section": "typography" },
+      { "name": "The Balanced Wrap Rule", "body": "All headings carry text-wrap: balance. All long-form prose carries text-wrap: pretty.", "section": "typography" },
+      { "name": "The Mono-as-Structure Rule", "body": "Mono is structural, not decorative. It appears on [N] marks, pill tags, eyebrow labels, and the version stamp. Decorative mono is costume.", "section": "typography" },
+      { "name": "The Flat-by-Default Rule", "body": "Buttons, cards, inputs, sections, and chips are flat at rest. Shadows are reserved for objects depicting physical things (phones).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Cashu Lilac at ≤5% of any screen.",
+      "Do invert surfaces between sections (dark → light → dark) like a printed monograph.",
+      "Do carry [N] index marks in JetBrains Mono on every section that enumerates.",
+      "Do use native <details> for accordions, <a> for buttons, <section data-theme> for theme scope.",
+      "Do cap body lines at 65ch and lead lines at 48–55ch.",
+      "Do use text-wrap: balance on headings and text-wrap: pretty on prose.",
+      "Do keep the navbar at 64px and adapt its theme via IntersectionObserver."
+    ],
+    "donts": [
+      "Don't use neon-on-black crypto colors. No electric neon, no 3D logos, no futurist UI.",
+      "Don't use consumer-fintech pastels, friendly mascots, or gradient illustrations à la Cash App / Venmo / Revolut.",
+      "Don't lean on bank navy + gold institutional gravitas.",
+      "Don't use Web3 / DeFi maximalism: glassmorphism, rainbow accents, chart-driven heros.",
+      "Don't use card grids with icon + heading + subtitle templates.",
+      "Don't use em dashes in user-facing copy. Use commas, colons, semicolons, periods, or parentheses.",
+      "Don't use background-clip: text gradient text, decorative glassmorphism, or border-left side stripes.",
+      "Don't use Cashu Lilac (#b4a7f5) for text on white. Switch to Cashu Lilac Deep (#7a66e8).",
+      "Don't apply ambient shadows to flat surfaces.",
+      "Don't ship a heading without text-wrap: balance or prose without text-wrap: pretty."
+    ]
+  }
+}
