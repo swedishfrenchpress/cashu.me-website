@@ -14,9 +14,9 @@ brand
 
 ## Product Purpose
 
-cashu.me is the open-source Cashu ecash wallet. Native on iOS and Android. Also runs in the browser, no install required. The site exists to give a Bitcoin-literate visitor a credible, fast answer to "what is Cashu, what does cashu.me give me, and should I install it?"
+cashu.me is the first Cashu ecash wallet, now native on iPhone and Android and also running in any browser with no install. The site exists to promote the app: give a Bitcoin-literate visitor a credible, fast answer to "what does cashu.me give me, and should I install it?"
 
-Success: a visitor leaves with the right mental model and tries the wallet. They understand that mints custody the underlying Bitcoin, that they hold bearer tokens, and that exit to any Lightning address is unconditional. Failure: they leave thinking they're locked in the way Wallet of Satoshi locks them in, or that the mint can freeze them specifically.
+Success: a visitor leaves with the right mental model, bearer tokens on their device with unconditional exit to any Lightning address, and installs the wallet. Failure: they leave thinking they're locked in the way Wallet of Satoshi locks them in, or that the mint can freeze them specifically.
 
 ## Brand Personality
 
@@ -38,7 +38,7 @@ What cashu.me must NOT look or feel like:
 ## Design Principles
 
 1. **Show, don't sell.** No "introducing" language, no "revolutionary" claims, no marketing superlatives. State properties plainly. The reader does the convincing.
-2. **Protocol-first, product-second.** "Cashu" is the protocol; "cashu.me" is the wallet. The site is candid about being one wallet among many possible implementations. This is a feature, not a hedge.
+2. **Product-first, protocol-second.** "cashu.me" is the wallet; "Cashu" is the protocol it implements. The homepage promotes the wallet. The protocol is named where it adds credibility (FAQ, footer, technical specimen blocks), not as the framing for what the site is about. The chronology claim — the first Cashu wallet shipped — is the wallet's primary authority.
 3. **Restraint is the voice.** Type and structure carry the page. When imagery enters, prefer one decisive moment over many decorative ones. The absence of imagery is not laziness, it is voice.
 4. **Editorial, not enterprise.** Section rhythm follows altitude.xyz / Klim-style specimen pages: big display, generous whitespace, asymmetric grids. Never centered card grids with icon-title-subtitle templates.
 5. **Bitcoin-literacy assumed.** "Lightning Network", "BTC", "bearer instrument", "custodial" are not jargon to define. The audience already knows them. This shortens copy and signals respect.

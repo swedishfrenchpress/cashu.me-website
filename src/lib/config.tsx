@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 
 export const siteConfig = {
   name: "cashu.me",
-  description: "Bearer cash for the web.",
+  description: "The native Cashu wallet.",
   tagline:
-    "Open-source ecash on the Cashu protocol. Mints custody the bitcoin. You hold blinded bearer tokens, redeemable to any Lightning address, anytime, without permission.",
+    "cashu.me is the first ecash wallet, now native on iPhone and Android and runs in any browser. Hold bearer tokens on your device, send with a tap, redeem to any Lightning address. No account.",
   url: "https://cashu.me",
   cta: "Open wallet",
   keywords: [

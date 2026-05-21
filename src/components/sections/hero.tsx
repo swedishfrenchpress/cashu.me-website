@@ -15,17 +15,38 @@ export function Hero() {
       id="hero"
       className="relative min-h-[100vh] w-full overflow-hidden"
     >
-      {/* Soft radial glow behind phones */}
-      <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
+      {/* Soft halos behind the phone trio — lifts them off the inkwell. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 flex h-[60%] items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
-          animate={{ opacity: 0.35, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2.4, ease: easeInOutCubic, delay: 0.3 }}
-          className="size-[700px] rounded-full bg-foreground/10 blur-[140px]"
+          className="absolute size-[820px] rounded-full bg-foreground/[0.04] blur-[160px]"
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 2.4, ease: easeInOutCubic, delay: 0.5 }}
+          className="absolute size-[460px] -translate-x-[260px] rounded-full bg-foreground/[0.06] blur-[110px]"
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 2.4, ease: easeInOutCubic, delay: 0.5 }}
+          className="absolute size-[460px] translate-x-[260px] rounded-full bg-foreground/[0.06] blur-[110px]"
         />
       </div>
 
       <main className="relative mx-auto max-w-[var(--max-container-width)] px-6 pt-32 text-center sm:pt-40 md:pt-48 lg:px-10">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: easeOutCubic }}
+          className="mb-8 font-mono text-[0.75rem] uppercase tracking-[0.1em] text-muted-foreground"
+        >
+          {siteConfig.name}
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
