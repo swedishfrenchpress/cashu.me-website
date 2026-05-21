@@ -58,7 +58,7 @@ function Lane({
       {/* Left identifier tile */}
       <div className="flex items-center gap-3">
         <div className="size-9 border border-foreground/20 bg-foreground/[0.04]" />
-        <span className="hidden text-label text-muted-foreground sm:inline">
+        <span className="hidden type-label text-muted-foreground sm:inline">
           {identifier}
         </span>
       </div>
@@ -74,7 +74,7 @@ function Lane({
         <div className="absolute left-[34%] top-0 flex h-full w-[18%] items-center justify-center sm:w-[14%]">
           <div className="absolute inset-y-0 left-0 w-px bg-foreground/25" />
           <div className="absolute inset-y-0 right-0 w-px bg-foreground/25" />
-          <span className="absolute -top-5 text-label text-muted-foreground">
+          <span className="absolute -top-5 type-label text-muted-foreground">
             {checkpoint}
           </span>
         </div>
@@ -323,7 +323,7 @@ export function CustodyComparison() {
               packetDelay={packetDelay}
               tIn={BEAT.scanDone}
               className={cn(
-                "inline-flex items-center border border-[color-mix(in_oklab,var(--scan)_40%,transparent)] bg-[color-mix(in_oklab,var(--scan)_8%,transparent)] px-2 py-1 text-label text-[color:var(--scan)]"
+                "inline-flex items-center border border-[color-mix(in_oklab,var(--scan)_40%,transparent)] bg-[color-mix(in_oklab,var(--scan)_8%,transparent)] px-2 py-1 type-label text-[color:var(--scan)]"
               )}
             >
               ✓ VALID
@@ -332,7 +332,7 @@ export function CustodyComparison() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={captionVariants}
-              className="text-label text-muted-foreground"
+              className="type-label text-muted-foreground"
             >
               Mint sees nothing else.
             </motion.span>
@@ -359,7 +359,7 @@ export function CustodyComparison() {
                 reduceMotion={reduceMotion}
                 packetDelay={packetDelay}
                 tIn={BEAT.boxCenter + i * chipStep}
-                className="inline-flex items-center border border-foreground/20 bg-foreground/[0.03] px-2 py-1 text-label text-foreground/80"
+                className="inline-flex items-center border border-foreground/20 bg-foreground/[0.03] px-2 py-1 type-label text-foreground/80"
               >
                 {field}
               </ExtractingChip>
@@ -368,7 +368,7 @@ export function CustodyComparison() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={captionVariants}
-              className="mt-1 text-label text-foreground/55"
+              className="mt-1 type-label text-foreground/55"
             >
               Custodian sees all of it.
             </motion.span>

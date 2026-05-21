@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
           {siteConfig.footer.columns.map((col) => (
             <div key={col.label} className="flex flex-col gap-4">
-              <span className="text-label text-muted-foreground">
+              <span className="type-label text-muted-foreground">
                 {col.label}
               </span>
               <ul className="flex flex-col gap-2.5">
@@ -38,7 +38,7 @@ export function Footer() {
 
         {/* The brand sign-off */}
         <div className="py-12 md:py-20">
-          <div className="text-wordmark uppercase text-foreground select-none">
+          <div className="type-wordmark uppercase text-foreground select-none">
             {siteConfig.name}
           </div>
         </div>
@@ -60,7 +60,7 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-1 text-label text-muted-foreground sm:items-end sm:text-right">
+          <div className="flex flex-col gap-1 type-label text-muted-foreground sm:items-end sm:text-right">
             <span>{siteConfig.footer.copyright}</span>
             <span>{siteConfig.footer.attribution}</span>
           </div>

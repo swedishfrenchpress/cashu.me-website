@@ -17,7 +17,7 @@ const NAV_LINKS = [
 ];
 
 const navLinkClass = cn(
-  "relative inline-block pb-1 text-label text-muted-foreground transition-colors hover:text-foreground",
+  "relative inline-block pb-1 type-label text-muted-foreground transition-colors hover:text-foreground",
   "after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0",
   "after:bg-primary after:transition-transform after:duration-300 after:ease-out",
   "hover:after:scale-x-100"

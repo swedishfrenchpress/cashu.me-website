@@ -27,7 +27,7 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: easeOutCubic }}
-          className="text-display-1 text-foreground"
+          className="type-display-1 text-foreground"
         >
           No install? Run it in the browser.
         </motion.h2>
@@ -37,7 +37,7 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: easeOutCubic, delay: 0.1 }}
-          className="mx-auto mt-10 max-w-[50ch] text-lead text-foreground/75"
+          className="mx-auto mt-10 max-w-[50ch] type-lead text-foreground/75"
         >
           Open cashu.me in any modern browser. Add it to your home screen for
           offline use. Same wallet, same protocol, no install.
