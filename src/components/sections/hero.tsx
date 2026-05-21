@@ -88,9 +88,30 @@ export function Hero() {
         {/* Floating phones */}
         <div className="relative mt-20 flex items-end justify-center gap-4 sm:mt-24 sm:gap-8 md:mt-28">
           {[
-            { src: siteConfig.featureHighlight[0].imageSrc, rotate: -8, delay: 1.0, y: [0, -14, 0], dur: 5.5 },
-            { src: siteConfig.featureHighlight[1].imageSrc, rotate: 0, delay: 0.8, y: [0, -20, 0], dur: 5.0 },
-            { src: siteConfig.featureHighlight[2].imageSrc, rotate: 8, delay: 1.0, y: [0, -14, 0], dur: 6.0 },
+            {
+              src: "/images/screen-mints.png",
+              alt: "cashu.me mints list",
+              rotate: -8,
+              delay: 1.0,
+              y: [0, -14, 0],
+              dur: 5.5,
+            },
+            {
+              src: "/images/screen-wallet.png",
+              alt: "cashu.me wallet home",
+              rotate: 0,
+              delay: 0.8,
+              y: [0, -20, 0],
+              dur: 5.0,
+            },
+            {
+              src: "/images/screen-receive.png",
+              alt: "cashu.me receive flow",
+              rotate: 8,
+              delay: 1.0,
+              y: [0, -14, 0],
+              dur: 6.0,
+            },
           ].map((phone, i) => (
             <motion.div
               key={i}
@@ -111,14 +132,16 @@ export function Hero() {
                 },
               }}
               className={cn(
-                "relative flex-shrink-0",
-                i === 1 ? "z-10 w-44 sm:w-56" : "w-36 sm:w-48 opacity-90"
+                "relative flex-shrink-0 overflow-hidden rounded-[2rem] border border-white/10 bg-black shadow-2xl",
+                i === 1
+                  ? "z-10 w-48 sm:w-60 md:w-72"
+                  : "w-36 sm:w-48 md:w-56 opacity-90"
               )}
             >
               <img
                 src={phone.src}
-                alt="cashu.me wallet"
-                className="h-auto w-full select-none drop-shadow-2xl"
+                alt={phone.alt}
+                className="h-auto w-full select-none"
                 draggable={false}
               />
             </motion.div>
