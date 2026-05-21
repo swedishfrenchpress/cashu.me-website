@@ -57,30 +57,19 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     const renderEyebrow = () =>
       (index || title) && (
         <motion.div
-          className="flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground"
+          className="flex items-baseline gap-3 text-label text-muted-foreground"
           style={{ opacity, y }}
         >
           {index && <span aria-hidden>[{index}]</span>}
-          {title && (
-            <span className="text-primary font-semibold">{title}</span>
-          )}
+          {title && <span className="text-primary">{title}</span>}
         </motion.div>
       );
 
     const renderSubtitle = (extra?: string) =>
       subtitle && (
         <motion.h2
-          className={cn(
-            "font-display text-balance font-medium text-foreground",
-            extra
-          )}
-          style={{
-            opacity,
-            y,
-            fontSize: "clamp(2.5rem, 6.2vw, 6.25rem)",
-            lineHeight: 0.94,
-            letterSpacing: "-0.035em",
-          }}
+          className={cn("text-display-2 text-foreground", extra)}
+          style={{ opacity, y }}
         >
           {subtitle}
         </motion.h2>
@@ -89,13 +78,8 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     const renderDescription = (extra?: string) =>
       description && (
         <motion.p
-          className={cn("text-muted-foreground text-balance", extra)}
-          style={{
-            opacity,
-            y,
-            fontSize: "clamp(1.125rem, 1.1vw + 0.6rem, 1.375rem)",
-            lineHeight: 1.4,
-          }}
+          className={cn("text-lead text-foreground/75", extra)}
+          style={{ opacity, y }}
         >
           {description}
         </motion.p>

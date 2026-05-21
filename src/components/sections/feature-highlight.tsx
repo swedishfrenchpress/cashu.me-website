@@ -88,22 +88,13 @@ function Feature({
       >
         <div className="flex max-w-xl flex-col gap-6">
           <motion.h3
-            style={{
-              fontSize: "clamp(2.5rem, 6.2vw, 6.25rem)",
-              lineHeight: 0.94,
-              letterSpacing: "-0.035em",
-            }}
-            className="font-display font-medium text-foreground text-balance"
+            className="text-display-2 text-foreground"
             variants={itemVariants}
           >
             {title}
           </motion.h3>
           <motion.p
-            style={{
-              fontSize: "clamp(1.125rem, 1.1vw + 0.6rem, 1.375rem)",
-              lineHeight: 1.4,
-            }}
-            className="text-muted-foreground max-w-[50ch]"
+            className="text-lead text-foreground/75 max-w-[50ch]"
             variants={itemVariants}
           >
             {description}
@@ -118,11 +109,20 @@ function Feature({
           layout.imageAlignClass
         )}
       >
-        <img
-          src={imageSrc}
-          alt={title}
-          className="h-auto w-full max-w-[300px] drop-shadow-2xl"
-        />
+        <div className="relative">
+          {/* Soft halo lifts the phone off the inkwell, matching the hero. */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 flex items-center justify-center"
+          >
+            <div className="size-[520px] rounded-full bg-foreground/[0.08] blur-[140px]" />
+          </div>
+          <img
+            src={imageSrc}
+            alt={title}
+            className="relative h-auto w-full max-w-[300px] rounded-[2rem] border border-foreground/15 drop-shadow-2xl"
+          />
+        </div>
       </div>
     </div>
   );

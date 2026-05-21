@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { CustodyComparison } from "@/components/illustrations/custody-comparison";
 import { Section } from "@/components/section";
 import { easeInOutCubic } from "@/lib/animation";
 import { siteConfig } from "@/lib/config";
@@ -70,30 +71,27 @@ export function BentoGrid() {
               )}
             >
               <div className="flex flex-col">
-                <h3
-                  style={{
-                    fontSize: "clamp(1.75rem, 3vw, 3rem)",
-                    lineHeight: 0.94,
-                    letterSpacing: "-0.035em",
-                  }}
-                  className="font-display font-medium text-foreground text-balance"
-                >
+                <h3 className="text-display-3 text-foreground">
                   {item.title}
                 </h3>
-                <p className="mt-4 max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg">
+                <p className="mt-4 max-w-prose text-body-lg text-foreground/70">
                   {item.content}
                 </p>
               </div>
               <div className="mt-6 flex justify-center">
-                <img
-                  src={item.imageSrc}
-                  alt={item.imageAlt}
-                  className={cn(
-                    "h-64 w-auto select-none object-contain object-top transition-transform duration-500 group-hover:-translate-y-2 sm:h-80",
-                    item.fullWidth && "sm:h-96"
-                  )}
-                  draggable={false}
-                />
+                {item.id === "custody-comparison" ? (
+                  <CustodyComparison />
+                ) : (
+                  <img
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    className={cn(
+                      "h-64 w-auto select-none object-contain object-top transition-transform duration-500 group-hover:-translate-y-2 sm:h-80",
+                      item.fullWidth && "sm:h-96"
+                    )}
+                    draggable={false}
+                  />
+                )}
               </div>
             </motion.div>
           );

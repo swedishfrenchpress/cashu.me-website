@@ -150,6 +150,8 @@ A two-surface monochrome system anchored by a single chromatic accent. The palet
 
 **The Specimen Scale Rule.** Display 1 is reserved for the page's two apex moments: the opening hero ("Bearer cash for the web.") and the closing CTA ("Take it with you."). Together they bookend the page. No element in the body of the page ever reaches that size.
 
+**The Wordmark Tier.** A single scale step exists above Display 1 — `text-wordmark` (`clamp(4rem, 18vw, 14rem)`, weight 600, tracking -0.05em). It is reserved for the footer brand sign-off (a viewport-spanning `CASHU.ME`) and never appears elsewhere. The Specimen Scale Rule is unchanged: Display 1 remains exclusive to the hero and closing CTA; the wordmark is a brand mark, not a heading, and operates outside that hierarchy.
+
 **The Balanced Wrap Rule.** All headings carry `text-wrap: balance`. All long-form prose carries `text-wrap: pretty`. The page never ships a heading with an orphaned single word on the last line if the browser can prevent it.
 
 **The Mono-as-Structure Rule.** Mono is structural, not decorative. It appears on `[N]` index marks, pill-tag chips, eyebrow labels, and the version stamp in the footer. It does NOT appear on body prose, headings, or button labels. Decorative mono is costume.
@@ -206,7 +208,7 @@ Do not recolor, restyle, or stretch the artwork. Do not place on top of imagery.
 
 ### Specimen Blocks
 
-Each pillar in the "What's different" section is paired with a specimen: a small typographic exhibit that demonstrates the property rather than illustrating it. Examples: a wrapped serialization of a blinded token, a stylized Lightning invoice fragment, a redemption arrow to a Lightning address. Mono, hairline-bordered, flat, with a `[N]` index mark in the top-left corner.
+Each pillar in the "What's different" section is paired with a specimen: a small typographic exhibit that demonstrates the property rather than illustrating it. Examples: a wrapped serialization of blinded ecash, a stylized Lightning invoice fragment, a redemption arrow to a Lightning address. Mono, hairline-bordered, flat, with a `[N]` index mark in the top-left corner.
 
 Specimen blocks are not cards. They are exhibits.
 
@@ -240,4 +242,4 @@ Native `<details>` / `<summary>`. Each item is separated by a 1px top hairline. 
 - **Don't** apply ambient shadows to flat surfaces. The Phone Placeholder shadow is the only exception, scoped to that component.
 - **Don't** ship a heading without `text-wrap: balance` or prose without `text-wrap: pretty`.
 - **Don't** redefine tokens at the call site. New utilities go through the `@theme inline` block in `globals.css`.
-- **Don't** claim "self-custodial" or "no custodian." Cashu is custodial: mints hold the underlying Bitcoin. The accurate framing is bearer tokens plus unconditional withdrawal to any Lightning address. Candor is the brand; overclaiming corrodes it.
+- **Don't** claim "self-custodial" or "no custodian." Cashu is custodial: mints hold the underlying Bitcoin. The accurate framing is bearer ecash plus unconditional withdrawal to any Lightning address. Candor is the brand; overclaiming corrodes it.
