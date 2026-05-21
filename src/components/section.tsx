@@ -57,7 +57,7 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     const renderEyebrow = () =>
       (index || title) && (
         <motion.div
-          className="flex items-baseline gap-3 text-label text-muted-foreground"
+          className="flex items-baseline gap-3 type-label text-muted-foreground"
           style={{ opacity, y }}
         >
           {index && <span aria-hidden>[{index}]</span>}
@@ -68,7 +68,7 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     const renderSubtitle = (extra?: string) =>
       subtitle && (
         <motion.h2
-          className={cn("text-display-2 text-foreground", extra)}
+          className={cn("type-display-2 text-foreground", extra)}
           style={{ opacity, y }}
         >
           {subtitle}
@@ -78,7 +78,7 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     const renderDescription = (extra?: string) =>
       description && (
         <motion.p
-          className={cn("text-lead text-foreground/75", extra)}
+          className={cn("type-lead text-foreground/75", extra)}
           style={{ opacity, y }}
         >
           {description}

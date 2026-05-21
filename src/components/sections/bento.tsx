@@ -71,10 +71,10 @@ export function BentoGrid() {
               )}
             >
               <div className="flex flex-col">
-                <h3 className="text-display-3 text-foreground">
+                <h3 className="type-display-3 text-foreground">
                   {item.title}
                 </h3>
-                <p className="mt-4 max-w-prose text-body-lg text-foreground/70">
+                <p className="mt-4 max-w-prose type-body-lg text-foreground/70">
                   {item.content}
                 </p>
               </div>

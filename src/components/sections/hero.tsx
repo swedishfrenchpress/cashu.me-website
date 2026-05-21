@@ -42,7 +42,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic }}
-          className="mb-10 text-label text-muted-foreground"
+          className="mb-10 type-label text-muted-foreground"
         >
           {siteConfig.name}
         </motion.div>
@@ -51,7 +51,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic, delay: 0.1 }}
-          className="text-display-1 text-foreground"
+          className="type-display-1 text-foreground"
         >
           {siteConfig.description}
         </motion.h1>
@@ -60,7 +60,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic, delay: 0.3 }}
-          className="mx-auto mt-10 max-w-[50ch] text-lead text-foreground/75"
+          className="mx-auto mt-10 max-w-[50ch] type-lead text-foreground/75"
         >
           {siteConfig.tagline}
         </motion.p>
@@ -79,7 +79,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic, delay: 0.7 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-label text-muted-foreground"
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 type-label text-muted-foreground"
         >
           <a
             href={siteConfig.links.repo}
