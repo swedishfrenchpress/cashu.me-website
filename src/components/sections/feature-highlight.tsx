@@ -88,22 +88,13 @@ function Feature({
       >
         <div className="flex max-w-xl flex-col gap-6">
           <motion.h3
-            style={{
-              fontSize: "clamp(2.5rem, 6.2vw, 6.25rem)",
-              lineHeight: 0.94,
-              letterSpacing: "-0.035em",
-            }}
-            className="font-display font-medium text-foreground text-balance"
+            className="text-display-2 text-foreground"
             variants={itemVariants}
           >
             {title}
           </motion.h3>
           <motion.p
-            style={{
-              fontSize: "clamp(1.125rem, 1.1vw + 0.6rem, 1.375rem)",
-              lineHeight: 1.4,
-            }}
-            className="text-muted-foreground max-w-[50ch]"
+            className="text-lead text-foreground/75 max-w-[50ch]"
             variants={itemVariants}
           >
             {description}

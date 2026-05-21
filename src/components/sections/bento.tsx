@@ -70,17 +70,10 @@ export function BentoGrid() {
               )}
             >
               <div className="flex flex-col">
-                <h3
-                  style={{
-                    fontSize: "clamp(1.75rem, 3vw, 3rem)",
-                    lineHeight: 0.94,
-                    letterSpacing: "-0.035em",
-                  }}
-                  className="font-display font-medium text-foreground text-balance"
-                >
+                <h3 className="text-display-3 text-foreground">
                   {item.title}
                 </h3>
-                <p className="mt-4 max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg">
+                <p className="mt-4 max-w-prose text-body-lg text-foreground/70">
                   {item.content}
                 </p>
               </div>

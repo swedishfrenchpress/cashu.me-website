@@ -42,7 +42,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic }}
-          className="mb-8 font-mono text-[0.75rem] uppercase tracking-[0.1em] text-muted-foreground"
+          className="mb-10 text-label text-muted-foreground"
         >
           {siteConfig.name}
         </motion.div>
@@ -51,12 +51,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic, delay: 0.1 }}
-          style={{
-            fontSize: "clamp(3.5rem, 10vw, 10.5rem)",
-            lineHeight: 0.94,
-            letterSpacing: "-0.035em",
-          }}
-          className="font-display font-medium text-foreground"
+          className="text-display-1 text-foreground"
         >
           {siteConfig.description}
         </motion.h1>
@@ -65,11 +60,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic, delay: 0.3 }}
-          style={{
-            fontSize: "clamp(1.125rem, 1.1vw + 0.6rem, 1.375rem)",
-            lineHeight: 1.4,
-          }}
-          className="mx-auto mt-10 max-w-[50ch] text-muted-foreground"
+          className="mx-auto mt-10 max-w-[50ch] text-lead text-foreground/75"
         >
           {siteConfig.tagline}
         </motion.p>
@@ -88,7 +79,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: easeOutCubic, delay: 0.7 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 font-mono text-[0.75rem] uppercase tracking-[0.1em] text-muted-foreground"
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-label text-muted-foreground"
         >
           <a
             href={siteConfig.links.repo}
