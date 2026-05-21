@@ -86,15 +86,24 @@ function Feature({
         animate={isActive ? "visible" : "hidden"}
         variants={textVariants}
       >
-        <div className="flex max-w-md flex-col gap-5">
+        <div className="flex max-w-xl flex-col gap-6">
           <motion.h3
-            className="font-display text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl"
+            style={{
+              fontSize: "clamp(2.5rem, 6.2vw, 6.25rem)",
+              lineHeight: 0.94,
+              letterSpacing: "-0.035em",
+            }}
+            className="font-display font-medium text-foreground text-balance"
             variants={itemVariants}
           >
             {title}
           </motion.h3>
           <motion.p
-            className="text-lg leading-relaxed text-muted-foreground md:text-xl"
+            style={{
+              fontSize: "clamp(1.125rem, 1.1vw + 0.6rem, 1.375rem)",
+              lineHeight: 1.4,
+            }}
+            className="text-muted-foreground max-w-[50ch]"
             variants={itemVariants}
           >
             {description}
@@ -145,11 +154,8 @@ export function FeatureHighlight() {
   return (
     <Section
       id="features"
-      index="001"
       variant="editorial"
-      title="Features"
-      subtitle="cash in three taps"
-      description="Receive, request, send. The wallet does not get in the way."
+      hideHeader
       className="container mx-auto max-w-[var(--max-container-width)] px-6 py-[var(--section-y-wide)] lg:px-10"
       ref={containerRef}
     >
