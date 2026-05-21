@@ -71,10 +71,16 @@ const Section = forwardRef<HTMLElement, SectionProps>(
       subtitle && (
         <motion.h2
           className={cn(
-            "font-display text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl",
+            "font-display text-balance font-medium text-foreground",
             extra
           )}
-          style={{ opacity, y }}
+          style={{
+            opacity,
+            y,
+            fontSize: "clamp(2.5rem, 6.2vw, 6.25rem)",
+            lineHeight: 0.94,
+            letterSpacing: "-0.035em",
+          }}
         >
           {subtitle}
         </motion.h2>
@@ -83,11 +89,13 @@ const Section = forwardRef<HTMLElement, SectionProps>(
     const renderDescription = (extra?: string) =>
       description && (
         <motion.p
-          className={cn(
-            "text-lg leading-8 text-muted-foreground text-balance",
-            extra
-          )}
-          style={{ opacity, y }}
+          className={cn("text-muted-foreground text-balance", extra)}
+          style={{
+            opacity,
+            y,
+            fontSize: "clamp(1.125rem, 1.1vw + 0.6rem, 1.375rem)",
+            lineHeight: 1.4,
+          }}
         >
           {description}
         </motion.p>

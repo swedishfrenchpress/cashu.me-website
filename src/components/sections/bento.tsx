@@ -9,9 +9,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const CARD_SHAPES = [
-  { rounded: "rounded-[2rem]", minHeight: "min-h-[460px]" },
-  { rounded: "rounded-2xl", minHeight: "min-h-[360px]" },
-  { rounded: "rounded-2xl", minHeight: "min-h-[420px]" },
+  { rounded: "rounded-none", minHeight: "min-h-[460px]" },
+  { rounded: "rounded-none", minHeight: "min-h-[360px]" },
+  { rounded: "rounded-none", minHeight: "min-h-[420px]" },
 ];
 
 export function BentoGrid() {
@@ -72,10 +72,17 @@ export function BentoGrid() {
               )}
             >
               <div className="flex flex-col">
-                <h3 className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                <h3
+                  style={{
+                    fontSize: "clamp(1.75rem, 3vw, 3rem)",
+                    lineHeight: 0.94,
+                    letterSpacing: "-0.035em",
+                  }}
+                  className="font-display font-medium text-foreground text-balance"
+                >
                   {item.title}
                 </h3>
-                <p className="mt-3 max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg">
+                <p className="mt-4 max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg">
                   {item.content}
                 </p>
               </div>

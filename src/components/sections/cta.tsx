@@ -27,7 +27,12 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: easeOutCubic }}
-          className="font-display font-semibold leading-[0.96] tracking-tight text-balance text-[clamp(3rem,8vw,6rem)]"
+          style={{
+            fontSize: "clamp(3.5rem, 10vw, 10.5rem)",
+            lineHeight: 0.94,
+            letterSpacing: "-0.035em",
+          }}
+          className="font-display font-medium text-balance text-foreground"
         >
           No install? Run it in the browser.
         </motion.h2>
@@ -37,7 +42,11 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: easeOutCubic, delay: 0.1 }}
-          className="mx-auto mt-8 max-w-xl text-base text-muted-foreground sm:text-lg"
+          style={{
+            fontSize: "clamp(1.125rem, 1.1vw + 0.6rem, 1.375rem)",
+            lineHeight: 1.4,
+          }}
+          className="mx-auto mt-10 max-w-[50ch] text-muted-foreground"
         >
           Open cashu.me in any modern browser. Add it to your home screen for
           offline use. Same wallet, same protocol, no install.
