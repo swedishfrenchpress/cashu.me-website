@@ -1,6 +1,5 @@
 "use client";
 
-import { Icons } from "@/components/icons";
 import { Logo } from "@/components/logo";
 import { MobileDrawer } from "@/components/mobile-drawer";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,6 +9,19 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+const NAV_LINKS = [
+  { label: "GitHub", href: siteConfig.links.repo, external: true },
+  { label: "Spec", href: siteConfig.links.spec, external: true },
+  { label: "Docs", href: siteConfig.links.docs, external: true },
+];
+
+const navLinkClass = cn(
+  "relative inline-block pb-1 text-label text-muted-foreground transition-colors hover:text-foreground",
+  "after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0",
+  "after:bg-primary after:transition-transform after:duration-300 after:ease-out",
+  "hover:after:scale-x-100"
+);
 
 export function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -59,7 +71,7 @@ export function Header() {
           }}
           className="sticky top-0 z-50 bg-background/70 backdrop-blur-xl"
         >
-          <div className="container mx-auto flex max-w-[var(--max-container-width)] items-center justify-between px-6 py-4 lg:px-10">
+          <div className="container relative mx-auto flex max-w-[var(--max-container-width)] items-center justify-between gap-6 px-6 py-4 lg:px-10">
             <Link
               href="/"
               title="cashu.me"
@@ -71,40 +83,45 @@ export function Header() {
               </span>
             </Link>
 
-            <div className="hidden items-center gap-1 lg:flex">
-              <a
-                href={siteConfig.links.repo}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="GitHub"
-                className="inline-flex size-9 items-center justify-center rounded-none text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
+            <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex">
+              {NAV_LINKS.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className={navLinkClass}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={navLinkClass}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
+            </nav>
+
+            <Link
+              href={siteConfig.links.wallet}
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "group hidden gap-2 lg:inline-flex"
+              )}
+            >
+              {siteConfig.cta}
+              <span
+                aria-hidden
+                className="text-foreground/60 transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:text-foreground"
               >
-                <Icons.github className="size-[18px]" />
-              </a>
-              <a
-                href={siteConfig.links.spec}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="rounded-none px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
-              >
-                Spec
-              </a>
-              <Link
-                href={siteConfig.links.docs}
-                className="rounded-none px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
-              >
-                Docs
-              </Link>
-              <Link
-                href={siteConfig.links.wallet}
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "sm" }),
-                  "ml-2"
-                )}
-              >
-                {siteConfig.cta}
-              </Link>
-            </div>
+                →
+              </span>
+            </Link>
 
             <div className="block lg:hidden">
               <MobileDrawer />
