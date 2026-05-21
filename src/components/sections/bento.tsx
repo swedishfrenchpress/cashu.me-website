@@ -2,6 +2,7 @@
 "use client";
 
 import { CustodyComparison } from "@/components/illustrations/custody-comparison";
+import { IMessageChat } from "@/components/illustrations/imessage-chat";
 import { Section } from "@/components/section";
 import { easeInOutCubic } from "@/lib/animation";
 import { siteConfig } from "@/lib/config";
@@ -81,6 +82,8 @@ export function BentoGrid() {
               <div className="mt-6 flex justify-center">
                 {item.id === "custody-comparison" ? (
                   <CustodyComparison />
+                ) : item.id === "imessage-chat" ? (
+                  <IMessageChat />
                 ) : (
                   <img
                     src={item.imageSrc}

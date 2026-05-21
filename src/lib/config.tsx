@@ -62,11 +62,12 @@ export const siteConfig = {
       fullWidth: true,
     },
     {
-      title: "Cashu mints can't link your transactions.",
+      id: "imessage-chat",
+      title: "iMessage, SMS, Bluetooth, your group chat.",
       content:
-        "Blinded signatures mean the mint signs ecash it cannot tie to a holder. Bearer cash, restored on the internet.",
+        "Ecash is just text. Anywhere you can paste a string — a chat, an SMS, a Bluetooth share — you can send money. No app to install on their end.",
       imageSrc: "/images/iphone-placeholder.png",
-      imageAlt: "Cashu wallet showing blinded ecash",
+      imageAlt: "iMessage chat showing an ecash token sent as a text message",
       fullWidth: false,
     },
     {
