@@ -28,6 +28,19 @@
   animation: accordion-up 0.2s ease-out;
 }
 
+@keyframes cashu-loading {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@utility animate-cashu-loading {
+  animation: cashu-loading 1.4s ease-in-out infinite;
+}
+
 /* Type ramp — DESIGN.md specimen scale.
    Single source of truth for the editorial type system.
    See /PRODUCT.md and /DESIGN.md for the brand spec. */
@@ -293,4 +306,12 @@ p {
 ::selection {
   background: var(--primary);
   color: var(--primary-foreground);
+}
+
+/* Uniform focus ring across every interactive element.
+   Keyboard users should never see a browser-blue default. */
+:where(a, button, [role="button"], summary, [data-radix-collection-item]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+  border-radius: 2px;
 }

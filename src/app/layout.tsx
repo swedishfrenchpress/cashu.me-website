@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ConsoleGreeting } from "@/components/console-greeting";
+import { TabFlutter } from "@/components/tab-flutter";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -38,6 +40,8 @@ export default function RootLayout({
           enableSystem={false}
         >
           {children}
+          <ConsoleGreeting />
+          <TabFlutter />
         </ThemeProvider>
       </body>
     </html>

@@ -1,3 +1,4 @@
+import { FooterWordmark } from "@/components/footer-wordmark";
 import { Icons } from "@/components/icons";
 import { siteConfig } from "@/lib/config";
 
@@ -38,9 +39,7 @@ export function Footer() {
 
         {/* The brand sign-off */}
         <div className="py-12 md:py-20">
-          <div className="type-wordmark uppercase text-foreground select-none">
-            {siteConfig.name}
-          </div>
+          <FooterWordmark text={siteConfig.name} />
         </div>
 
         {/* Bottom row — socials + copyright */}

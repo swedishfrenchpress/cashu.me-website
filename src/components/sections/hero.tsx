@@ -3,7 +3,7 @@
 
 import { AppStoreBadge } from "@/components/ui/app-store-badge";
 import { PlayStoreBadge } from "@/components/ui/play-store-badge";
-import { easeInOutCubic, easeOutCubic } from "@/lib/animation";
+import { easeInOutCubic, easeOutCubic, easeOutQuart } from "@/lib/animation";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -50,9 +50,9 @@ export function Hero() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: easeOutCubic, delay: 0.1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.32, ease: easeOutQuart, delay: 0.18 }}
           className="type-display-1 text-foreground"
         >
           {siteConfig.description}

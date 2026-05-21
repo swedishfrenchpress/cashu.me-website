@@ -7,6 +7,7 @@ const links = {
   docs: "https://docs.cashu.space",
   nostr: "https://primal.net/cashubtc",
   twitter: "https://x.com/CashuBTC",
+  opencash: "http://opencash.dev/",
   appStore: "https://apps.apple.com/app/idTODO",
   playStore: "https://play.google.com/store/apps/details?id=meTODO",
 };
@@ -133,6 +134,7 @@ export const siteConfig = {
         links: [
           { label: "Nostr", href: links.nostr },
           { label: "X", href: links.twitter },
+          { label: "Opencash", href: links.opencash },
         ],
       },
     ],
