@@ -107,15 +107,17 @@ export function Header() {
               )}
             </nav>
 
-            <Link
+            <a
               href={siteConfig.links.wallet}
+              target="_blank"
+              rel="noreferrer noopener"
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
                 "hidden lg:inline-flex"
               )}
             >
               {siteConfig.cta}
-            </Link>
+            </a>
 
             <div className="block lg:hidden">
               <MobileDrawer />

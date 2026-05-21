@@ -7,7 +7,6 @@ import { easeInOutCubic, easeOutCubic, easeOutQuart } from "@/lib/animation";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export function Hero() {
   return (
@@ -87,16 +86,18 @@ export function Hero() {
             href={siteConfig.links.repo}
             target="_blank"
             rel="noreferrer noopener"
-            className="transition-colors hover:text-foreground"
+            className="inline-block py-2 transition-colors hover:text-foreground"
           >
             → View source on GitHub
           </a>
-          <Link
+          <a
             href={siteConfig.links.spec}
-            className="transition-colors hover:text-foreground"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-block py-2 transition-colors hover:text-foreground"
           >
             → Read the spec
-          </Link>
+          </a>
         </motion.div>
 
         {/* Floating phones */}
@@ -148,8 +149,8 @@ export function Hero() {
               className={cn(
                 "relative flex-shrink-0 overflow-hidden rounded-[2rem] border border-white/10 bg-black shadow-2xl",
                 i === 1
-                  ? "z-10 w-48 sm:w-60 md:w-72"
-                  : "w-36 sm:w-48 md:w-56 opacity-90"
+                  ? "z-10 w-44 sm:w-60 md:w-72 xl:w-80"
+                  : "w-32 sm:w-48 md:w-56 xl:w-64 opacity-90"
               )}
             >
               <img

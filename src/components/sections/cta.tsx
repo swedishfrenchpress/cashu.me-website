@@ -5,7 +5,6 @@ import { easeOutCubic } from "@/lib/animation";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export function CTA() {
   return (
@@ -49,18 +48,22 @@ export function CTA() {
           transition={{ duration: 0.6, ease: easeOutCubic, delay: 0.2 }}
           className="mt-12 flex flex-wrap items-center justify-center gap-3"
         >
-          <Link
+          <a
             href={siteConfig.links.wallet}
+            target="_blank"
+            rel="noreferrer noopener"
             className={cn(buttonVariants({ variant: "default", size: "lg" }))}
           >
             Open Cashu.me
-          </Link>
-          <Link
+          </a>
+          <a
             href={siteConfig.links.repo}
+            target="_blank"
+            rel="noreferrer noopener"
             className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
           >
             View source
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

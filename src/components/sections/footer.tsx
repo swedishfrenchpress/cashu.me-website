@@ -13,20 +13,20 @@ export function Footer() {
     <footer className="border-t border-border/60">
       <div className="container mx-auto flex max-w-[var(--max-container-width)] flex-col px-6 pt-16 pb-10 lg:px-10 lg:pt-20">
         {/* Utility columns */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8 lg:gap-12">
           {siteConfig.footer.columns.map((col) => (
             <div key={col.label} className="flex flex-col gap-4">
               <span className="type-label text-muted-foreground">
                 {col.label}
               </span>
-              <ul className="flex flex-col gap-2.5">
+              <ul className="flex flex-col gap-1">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="text-base text-foreground/85 transition-colors hover:text-primary"
+                      className="-mx-1 inline-block px-1 py-1.5 text-base text-foreground/85 transition-colors hover:text-primary"
                     >
                       {link.label}
                     </a>
@@ -44,7 +44,7 @@ export function Footer() {
 
         {/* Bottom row — socials + copyright */}
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div className="flex items-center gap-5">
+          <div className="-mx-2 flex items-center gap-2">
             {social.map((s) => (
               <a
                 key={s.label}
@@ -52,7 +52,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={s.label}
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="inline-flex h-11 w-11 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
               >
                 {s.icon}
               </a>

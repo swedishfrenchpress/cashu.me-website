@@ -57,12 +57,14 @@ export function MobileDrawer() {
           ))}
         </nav>
         <DrawerFooter>
-          <Link
+          <a
             href={siteConfig.links.wallet}
+            target="_blank"
+            rel="noreferrer noopener"
             className={cn(buttonVariants({ variant: "default", size: "lg" }))}
           >
             {siteConfig.cta}
-          </Link>
+          </a>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
