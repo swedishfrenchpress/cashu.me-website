@@ -1,7 +1,7 @@
 "use client";
 
 import { CloudField } from "@/components/sky/cloud-field";
-import { ApkBadge } from "@/components/ui/apk-badge";
+import { ZapstoreBadge } from "@/components/ui/zapstore-badge";
 import { AppStoreBadge } from "@/components/ui/app-store-badge";
 import { BrowserBadge } from "@/components/ui/browser-badge";
 import {
@@ -178,8 +178,8 @@ export function Hero() {
             href={siteConfig.links.testflight}
             className="w-full justify-center sm:w-auto"
           />
-          <ApkBadge
-            href={siteConfig.links.androidApk}
+          <ZapstoreBadge
+            href={siteConfig.links.zapstore}
             className="w-full justify-center sm:w-auto"
           />
           <BrowserBadge

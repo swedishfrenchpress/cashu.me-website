@@ -244,7 +244,7 @@ Used at most once on the page, with a single composed mock interior. Never repea
 
 ### Store Badges
 
-Custom icon + two-line-label chips (`<AppStoreBadge>`, `<ApkBadge>`, `<BrowserBadge>`) rather than official platform artwork. Reserved for the hero, where they signal native install (plus the in-browser path). Same frosted-glass recipe as the button system (see Buttons above), sized at `h-16` with a `size-8` icon and an 18px label for a bigger, easier tap target than a standard button. Hover brightens the border, deepens the fill, and nudges the badge up (`-translate-y-0.5`).
+Custom icon + two-line-label chips (`<AppStoreBadge>`, `<ZapstoreBadge>`, `<BrowserBadge>`) rather than official platform artwork. Reserved for the hero, where they signal native install (plus the in-browser path). Same frosted-glass recipe as the button system (see Buttons above), sized at `h-16` with a `size-8` icon and an 18px label for a bigger, easier tap target than a standard button. Hover brightens the border, deepens the fill, and nudges the badge up (`-translate-y-0.5`).
 
 ### Accordion
 
