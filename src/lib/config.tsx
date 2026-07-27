@@ -1,5 +1,22 @@
 import type { ReactNode } from "react";
 
+// Discriminated on `id` so bento.tsx narrows: the custody-comparison card
+// renders the <CustodyComparison /> illustration and carries no image, the
+// other two carry a theme-swapped pair.
+type BentoItem = {
+  title: string;
+  content: string;
+  fullWidth: boolean;
+} & (
+  | { id: "custody-comparison" }
+  | {
+      id: "imessage-chat" | "lightning-address";
+      imageSrc: string;
+      imageSrcDark?: string;
+      imageAlt: string;
+    }
+);
+
 const links = {
   wallet: "https://wallet.cashu.me",
   spec: "https://github.com/cashubtc/nuts",
@@ -64,8 +81,8 @@ export const siteConfig = {
       title: "Account wallets see everything.",
       content:
         "Every send, every receive, every contact, tied to a single account in someone else's database. A change of policy is a change of access.",
-      imageSrc: "/images/iphone-placeholder.png",
-      imageAlt: "Cluttered wallet UI showing transaction history",
+      // No imageSrc: bento.tsx renders <CustodyComparison /> for this id and
+      // never reads one.
       fullWidth: true,
     },
     {
@@ -89,7 +106,7 @@ export const siteConfig = {
       imageAlt: "Bottom sheet showing a Lightning Address QR code with Copy and Share actions",
       fullWidth: false,
     },
-  ],
+  ] as BentoItem[],
   faqs: [
     {
       question: "How private is this?",
